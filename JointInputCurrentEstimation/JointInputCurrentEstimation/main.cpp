@@ -3,6 +3,8 @@
 #include<iostream>
 #include<vector>
 
+
+
 int main()
 {
 	std::vector<std::vector<double>> measurements_complete;
