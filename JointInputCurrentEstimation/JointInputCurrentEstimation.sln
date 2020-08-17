@@ -7,7 +7,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JointInputCurrentEstimation
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A530C5A1-5E16-4F69-A8CC-29DD3A6617E2}"
 	ProjectSection(SolutionItems) = preProject
-		data\test4.txt = data\test4.txt
+		data\LUT.txt = data\LUT.txt
 	EndProjectSection
 EndProject
 Global

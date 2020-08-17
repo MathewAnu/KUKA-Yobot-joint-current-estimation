@@ -21,9 +21,9 @@ void MeasurementData::read_data()
 		std::string line_to_split;
 		while (std::getline(file, line_to_split))
 		{
-			std::vector<std::string> line;
-			boost::split(line, line_to_split, boost::is_any_of("\t"));
-			measurements.push_back(string_to_number(line));
+			std::vector<std::string> line_strings;
+			boost::split(line_strings, line_to_split, boost::is_any_of(","));
+			measurements.push_back(string_to_number(line_strings));
 			number_of_measurements++;
 		}
 		file.close();

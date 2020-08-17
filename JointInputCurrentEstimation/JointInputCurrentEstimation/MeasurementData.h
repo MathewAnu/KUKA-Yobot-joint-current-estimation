@@ -4,6 +4,7 @@
 #include<iostream>
 #include<boost/algorithm/string.hpp>
 #include<vector>
+#include<array>
 
 
 class MeasurementData
