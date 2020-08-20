@@ -1,19 +1,16 @@
 #include "MeasurementData.h"
 
+template<typename T>
+int MeasurementData<T>::number_of_measurements = 0;
 
-int MeasurementData::number_of_measurements = 0;
-
-MeasurementData::MeasurementData(std::string filename)
+template<typename T>
+MeasurementData<T>::MeasurementData(std::string filename)
 {
 	this->filename = filename;
 }
 
-int MeasurementData::get_number_of_measurements()
-{
-	return number_of_measurements;
-}
-
-void MeasurementData::read_data()
+template<typename T>
+void MeasurementData<T>::read_data()
 {
 	std::ifstream file(filename);
 	if (file.is_open())
@@ -31,9 +28,10 @@ void MeasurementData::read_data()
 
 }
 
-std::vector<double> MeasurementData::string_to_number(std::vector<std::string> line)
+template<typename T>
+std::vector<T> MeasurementData<T>::string_to_number(std::vector<std::string> line)
 {	
-	std::vector<double> measurement_vector_t;
+	std::vector<T> measurement_vector_t;
 	for (std::string str : line)
 	{
 		measurement_vector_t.push_back(std::stod(str));
@@ -41,3 +39,12 @@ std::vector<double> MeasurementData::string_to_number(std::vector<std::string> l
 
 	return measurement_vector_t;
 }
+
+template<typename T>
+int MeasurementData<T>::get_number_of_measurements()
+{
+	return number_of_measurements;
+}
+
+template class MeasurementData<float>;
+template class MeasurementData<double>;

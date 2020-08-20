@@ -6,7 +6,7 @@
 #include<vector>
 #include<array>
 
-
+template<typename T>
 class MeasurementData
 {
 	static int number_of_measurements;
@@ -16,7 +16,8 @@ public:
 	std::string filename;
 	MeasurementData(std::string filename);
 	void read_data();		
-	std::vector<std::vector<double>> measurements;	
-	std::vector<double> string_to_number(std::vector<std::string> line);
+	std::vector<std::vector<T>> measurements;	
+	std::vector<T> string_to_number(std::vector<std::string> line);
 };
+
 
